@@ -1,4 +1,4 @@
-<h1 align="center">Ecommerce made with Next.js</h1>
+<h1 align="center">Ecommerce made with Next.js & Apito.io</h1>
 
 <p align="center">	
    <a href="https://www.linkedin.com/in/rafael-goulartb/">
@@ -18,12 +18,10 @@
   <img alt="" src="https://img.shields.io/github/repo-size/RafaelGoulartB/next-ecommerce?color=03B0E8" />
 </p>
 
-> This project was made to show a full ecommerce plataform made with Next.js and Nextjs Serverless functions to build the backend, using Apollo Server and Apollo Client to GraphQL.
+> This project is a form version of the original project [https://github.com/RafaelGoulartB/next-ecommerce](next-ecommerce) was made to show a full ecommerce plataform made with Next.js and Apito.io ( Backend as a Service ) and Apollo Client to GraphQL.
 
 <p align="center">
     <a href="README.md">English</a>
-    ·
-    <a href="README-pt.md">Portuguese</a>
  </p>
 
 <div align="center">
@@ -68,17 +66,16 @@ This project was made using the follow technologies:
 
 * [Next.js](https://nextjs.org/) - To SSR and routes control     
 * [GraphQL](https://graphql.org/) - To query language     
-* [Apollo](https://www.apollographql.com/) - To graphql server and client       
-* [Knex](https://knexjs.org/) - ORM   
+* [Apito.io](https://apito.io) - To graphql server       
 * [Vercel](https://vercel.com/) - To deploy website     
 
 # :rocket: Features
 
 - Authentication with Cookies Sessions.
-- Reset Password using email
+- Reset Password using email [TODO]
 - List Products
-- Filter products by Category
-- Sort list of products
+- Wild card search on products
+- Sort list of products by price
 - Live search
 - Add products to Wishlist
 - Add products to Cart
@@ -86,23 +83,24 @@ This project was made using the follow technologies:
 - Payment with Paypal
 - Review Products
   
-# :construction_worker: How to run
-**You need to install [Node.js](https://nodejs.org/en/download/) and [Yarn](https://yarnpkg.com/) first, then:**
+# :construction_worker: Access to Admin Panel of the Grpahql Server 
+If you dont have then create an account in [https://apito.io](apito.io) and on the project page click on the Quantam Ecommerce to get an idea on 
+how this graphql server is build.
 
 ### Rename env file
 Rename `.env.local-exemple` to `.env.local`
+
+Put your apito.io Access Token in the env file
+
+```
+NEXT_PUBLIC_TOKEN_SECRET = "8qceDZLxT3e4leVJSKsIrxwHcsnoiq3uv2n5sbQqU122uP7ExrQs80rfpjreb0OD8EEshmABRlvNeW3DcOTQWv6Xs58drNYMhgBenF4ZEPjWJ4YDWMb7WTPd6QzP2inMkxgEHyVCU8UgS8BXu0sYgWlYz6jPLQbdSUIYn8p"
+```
+
 ### Install Dependencies
 ```bash
 yarn install
 ```
-### Set up database
-```bash
-# Create DB using migrations
-yarn knex:migrate
 
-# Run seeds to populate database
-yarn knex:seed 
-```
 ### Run Aplication
 ```bash 
 yarn dev 

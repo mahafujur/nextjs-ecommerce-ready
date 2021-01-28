@@ -1,7 +1,6 @@
 import CategoriesItem from './categoriesItem';
 import { useQuery } from '@apollo/client';
 import { CATEGORIES } from '../apollo/client/queries';
-import offlineCategories from '../db/offlineData/categories';
 
 export default function AsideCategories() {
   const { data, loading, error } = useQuery(CATEGORIES);
